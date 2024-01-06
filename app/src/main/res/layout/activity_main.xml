@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#F9F9FA">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/rectangle_card">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:src="@drawable/logo1"
+            app:tint="#2196F3" />
+
+        <TextView
+            android:id="@+id/connected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:drawableStartCompat="@drawable/baseline_circle_24"
+            android:text="Live"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06:48:49 PM"
+            android:textSize="16sp"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/connected" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/r1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+        <TextView
+            android:id="@+id/r4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R4"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#CDCDCD"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/relayId"
+        android:layout_marginTop="5dp"
+        app:tabGravity="fill"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/rectangle_card"
+        app:tabMode="fixed" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/channelViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnLeftArrow" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="MSL14-M1 1"
+        android:layout_below="@id/tabLayout"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnLeftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/baseline_chevron_left_24"
+        android:contentDescription="@string/left_arrow"/>
+
+    <ImageButton
+        android:id="@+id/btnRightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/baseline_chevron_right_24"
+        android:contentDescription="@string/right_arrow"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SecondChannel"
+    android:background="#F9F9FA">
+
+    <GridLayout
+        android:id="@+id/gridLayoutChannels9to16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart9"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:id="@+id/jtype9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="J TYPE"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype9"
+                android:layout_marginEnd="10dp"
+                android:gravity="right"
+                android:text="300.00"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel 9"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart10"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="K TYPE"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/processValue10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype10"
+                android:layout_marginEnd="10dp"
+                android:gravity="right"
+                android:text="00.02"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="2dp"
+                android:text="Channel 10"
+                android:background="@drawable/rectangle_card"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart11"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="0-20mA"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype11"
+                android:gravity="right"
+                android:text="110.00"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Channel 11"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart12"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PT/PT.1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype12"
+                android:gravity="right"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:text="129.01"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel 12"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart13"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PT/PT.1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype13"
+                android:gravity="right"
+                android:text="290.00"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Channel 13"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart14"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0-10V"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype14"
+                android:gravity="right"
+                android:text="000.01"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel 14"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart15"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4-20mA"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype15"
+                android:gravity="right"
+                android:text="30.00"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel 15"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rectangle_card"
+            android:backgroundTint="#C3C1C1"
+            android:elevation="8dp">
+
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart16"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/jtype16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J TYPE"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/processValue16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jtype16"
+                android:gravity="right"
+                android:text="00"
+                android:textSize="22sp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel 16"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:padding="2dp"
+                android:background="@drawable/rectangle_card"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+
+    </GridLayout>
+</RelativeLayout>

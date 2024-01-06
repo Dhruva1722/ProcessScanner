@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ProcessScanner</string>
+    <string name="left_arrow">\n\n</string>
+    <string name="right_arrow" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
