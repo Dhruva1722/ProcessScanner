@@ -1,16 +1,28 @@
 package com.example.processscanner;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.RelativeLayout;
 
+import com.example.processscanner.Activites.Channel1;
+import com.example.processscanner.Activites.Channel2;
+import com.example.processscanner.Activites.Channel3;
+import com.example.processscanner.Activites.Channel4;
+import com.example.processscanner.Activites.Channel5;
+import com.example.processscanner.Activites.Channel6;
+import com.example.processscanner.Activites.Channel7;
+import com.example.processscanner.Activites.Channel8;
 import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -21,12 +33,19 @@ import java.util.ArrayList;
 
 
 public class FristChannel extends Fragment {
-
+    RelativeLayout cardChannel1,cardChannel2 ,cardChannel3,cardChannel4,cardChannel5,cardChannel6,cardChannel7,cardChannel8;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_frist_channel, container, false);
+
+        GridLayout gridLayout = view.findViewById(R.id.gridLayoutChannels1to8);
+
+        for (int i = 0; i < gridLayout.getChildCount(); i++) {
+            makeDraggable(gridLayout.getChildAt(i), i);
+        }
+
 
         LineChart[] lineCharts = new LineChart[8];
         lineCharts[0] = view.findViewById(R.id.chart1);
@@ -38,13 +57,96 @@ public class FristChannel extends Fragment {
         lineCharts[6] = view.findViewById(R.id.chart7);
         lineCharts[7] = view.findViewById(R.id.chart8);
 
-        // Configure each LineChart
+
+
+
+
         for (int i = 0; i < lineCharts.length; i++) {
             configureLineChart(lineCharts[i]);
-            int lineColor = getLineColor(i); // Define a method to get different line colors
-            int fillColor = getFillColor(i); // Define a method to get different fill colors
+            int lineColor = getLineColor(i);
+            int fillColor = getFillColor(i);
             setData(lineCharts[i], 50, 80, lineColor, fillColor);
         }
+
+         lineCharts[0].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel1.class);
+                startActivity(intent);
+            }
+        });
+        lineCharts[1].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel2.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[2].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel3.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[3].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel4.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[4].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel5.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[5].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel6.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[6].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel7.class);
+                startActivity(intent);
+            }
+        });
+
+        lineCharts[7].setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("--------", "onClick: Button is clicked ");
+                Intent intent = new Intent(getActivity(), Channel8.class);
+                startActivity(intent);
+            }
+        });
+
+//        lineCharts[8].setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Log.d("--------", "onClick: Button is clicked ");
+//                Intent intent = new Intent(getActivity(), Channel1.class);
+//                startActivity(intent);
+//            }
+//        });
 
         return view;
     }
@@ -62,7 +164,6 @@ public class FristChannel extends Fragment {
         dataSet.setDrawFilled(true);
         dataSet.setFillColor(fillColor);
         dataSet.setValueTextSize(0f);
-
 
         LineData data = new LineData(dataSet);
         lineChart.setData(data);
@@ -134,5 +235,38 @@ public class FristChannel extends Fragment {
             default:
                 return getResources().getColor(R.color.black);
         }
+    }
+
+
+    private void makeDraggable(final View view, final int index) {
+        view.setOnTouchListener(new View.OnTouchListener() {
+            float dX, dY;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        dX = v.getX() - event.getRawX();
+                        dY = v.getY() - event.getRawY();
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        v.animate()
+                                .x(event.getRawX() + dX)
+                                .y(event.getRawY() + dY)
+                                .setDuration(0)
+                                .start();
+                        break;
+
+                    case MotionEvent.ACTION_UP:
+                        // Handle the drop here if needed
+                        break;
+
+                    default:
+                        return false;
+                }
+                return true;
+            }
+        });
     }
 }

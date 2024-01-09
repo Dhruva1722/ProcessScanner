@@ -14,6 +14,7 @@ import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
@@ -22,9 +23,12 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -34,14 +38,34 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
 
-    private TextView relay1,relay2, relay3,relay4;
+    private TextView relay1,relay2, relay3,relay4 , timeTextView;
 
+    private Handler handler;
 
-//    GraphView graphView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        timeTextView = findViewById(R.id.time);
+        handler = new Handler(Looper.getMainLooper());
+
+        startUpdatingTime();
+    }
+
+    private void startUpdatingTime() {
+        // Schedule a runnable to update time every second
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                updateTime();
+                // Repeat the update every second
+                handler.postDelayed(this, 1000);
+            }
+        }, 1000);
+
+
+
 
         viewPager =findViewById(R.id.channelViewPager);
         tabLayout = findViewById(R.id.tabLayout);
@@ -88,8 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         final int textColor = Color.BLACK;
-        final long[] blinkIntervals = {500, 1000, 1500, 2000}; // Adjust intervals as needed
-
+        final long[] blinkIntervals = {500, 1000, 1500, 2000};
 
         for (int i = 0; i < relayTextViews.size(); i++) {
             final TextView currentRelay = relayTextViews.get(i);
@@ -110,8 +133,22 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    private void updateTime() {
+        // Get the current time
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
+        String currentTime = timeFormat.format(calendar.getTime());
 
+        // Set the current time to the TextView
+        timeTextView.setText(currentTime);
+    }
 
+    @Override
+    protected void onDestroy() {
+        // Remove the callbacks to prevent memory leaks
+        handler.removeCallbacksAndMessages(null);
+        super.onDestroy();
+    }
 }
 
 

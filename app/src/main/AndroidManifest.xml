@@ -13,6 +13,36 @@
         android:theme="@style/Theme.ProcessScanner"
         tools:targetApi="31">
         <activity
+            android:name=".Activites.Channel10"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel9"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel8"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel7"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel6"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel5"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel4"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel3"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel2"
+            android:exported="false" />
+        <activity
+            android:name=".Activites.Channel1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

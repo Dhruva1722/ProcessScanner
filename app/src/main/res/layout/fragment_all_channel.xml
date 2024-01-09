@@ -27,14 +27,14 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart1"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"/>
-
 
             <TextView
                 android:id="@+id/jtype"
@@ -84,7 +84,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart2"
@@ -141,7 +142,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart3"
@@ -198,7 +200,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
@@ -257,7 +260,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart5"
@@ -313,7 +317,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
@@ -370,7 +375,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart7"
@@ -427,7 +433,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
@@ -542,7 +549,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart10"
@@ -599,7 +607,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart11"
@@ -656,7 +665,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
@@ -715,7 +725,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart13"
@@ -771,7 +782,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
@@ -828,7 +840,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/chart15"
@@ -885,7 +898,8 @@
             android:layout_marginBottom="5dp"
             android:background="@drawable/rectangle_card"
             android:backgroundTint="#C3C1C1"
-            android:elevation="8dp">
+            android:elevation="8dp"
+            android:padding="5dp">
 
 
             <com.github.mikephil.charting.charts.LineChart
